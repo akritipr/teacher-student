@@ -42,3 +42,9 @@ npm run test
 ```
 
 
+## Optional
+Import postman collection 
+```sh
+https://github.com/akritipr/teacher-student/blob/main/postman-collection/AWS%20EC2.postman_collection.json
+https://github.com/akritipr/teacher-student/blob/main/postman-collection/Teacher%20Student.postman_collection.json
+```
