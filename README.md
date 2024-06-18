@@ -15,20 +15,30 @@ Clone this repository to your local machine using:
 ```sh
 git clone https://github.com/akritipr/teacher-student.git
 cd teacher-student/
+```
 
 ### Step 2: Download dependencies
+```sh
 npm install
+```
 
-### Step 3: Run the program
+
+### Step 3: DB setup to create tables
+Run the following command to create tables
+```sh
+node src/db/migrations/init.js
+```
+
+### Step 4: Run the program
+```sh
 npm run start
+
+```
 The program will run at port 3000
 
-### Step 4: Test the program
+### Step 5: Test the program
+```sh
 npm run test
+```
 
 
-## DB Setup
-
-### Step 1:
-Run the following command to create tables
-node src/db/migrations/init.js
