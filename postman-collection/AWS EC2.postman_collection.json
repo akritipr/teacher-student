@@ -1,0 +1,318 @@
+{
+	"info": {
+		"_postman_id": "8cbdeb76-0dd7-47d9-9bb8-bbd17e6816f1",
+		"name": "AWS EC2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-54-79-76-211.ap-southeast-2.compute.amazonaws.com:3000/api/studentsinfo",
+					"protocol": "http",
+					"host": [
+						"ec2-54-79-76-211",
+						"ap-southeast-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"studentsinfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Another",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"teacher\": \"teacherjoseph@gmail.com\",\r\n\"students\":\r\n[\"student11@gmail.com\",\"student12@gmail.com\",\"student14@gmail.com\",\"student15@gmail.com\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-54-79-76-211.ap-southeast-2.compute.amazonaws.com:3000/api/register",
+					"protocol": "http",
+					"host": [
+						"ec2-54-79-76-211",
+						"ap-southeast-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Common Students With no email id not present",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-54-79-76-211.ap-southeast-2.compute.amazonaws.com:3000/api/commonstudents?teacher=teacherjoseph2@gmail.com&teacher=teacheranthonyddd@gmail.com&teacher=teacherassnthony@gmail.com",
+					"protocol": "http",
+					"host": [
+						"ec2-54-79-76-211",
+						"ap-southeast-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"commonstudents"
+					],
+					"query": [
+						{
+							"key": "teacher",
+							"value": "teacherjoseph2@gmail.com"
+						},
+						{
+							"key": "teacher",
+							"value": "teacheranthonyddd@gmail.com"
+						},
+						{
+							"key": "teacher",
+							"value": "teacherassnthony@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Common Students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-54-79-76-211.ap-southeast-2.compute.amazonaws.com:3000/api/commonstudents?teacher=teacherjoseph@gmail.com&teacher=teacheranthony@gmail.com",
+					"protocol": "http",
+					"host": [
+						"ec2-54-79-76-211",
+						"ap-southeast-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"commonstudents"
+					],
+					"query": [
+						{
+							"key": "teacher",
+							"value": "teacherjoseph@gmail.com"
+						},
+						{
+							"key": "teacher",
+							"value": "teacheranthony@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get teachers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-54-79-76-211.ap-southeast-2.compute.amazonaws.com:3000/api/teachers",
+					"protocol": "http",
+					"host": [
+						"ec2-54-79-76-211",
+						"ap-southeast-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"teachers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retreive notifications",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"teacher\":  \"teacherjoe@gmail.com\",\r\n  \"notification\": \"Hello students!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-54-79-76-211.ap-southeast-2.compute.amazonaws.com:3000/api/retrievefornotifications",
+					"protocol": "http",
+					"host": [
+						"ec2-54-79-76-211",
+						"ap-southeast-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"retrievefornotifications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retreive notifications another",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"teacher\":  \"teacherjoe@gmail.com\",\r\n  \"notification\": \"Hello students! @student3@gmail.com @student11@gmail.com @student13@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-54-79-76-211.ap-southeast-2.compute.amazonaws.com:3000/api/retrievefornotifications",
+					"protocol": "http",
+					"host": [
+						"ec2-54-79-76-211",
+						"ap-southeast-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"retrievefornotifications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Suspend student - student email not present",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"student\" : \"student41@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-54-79-76-211.ap-southeast-2.compute.amazonaws.com:3000/api/suspend",
+					"protocol": "http",
+					"host": [
+						"ec2-54-79-76-211",
+						"ap-southeast-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"suspend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Suspend student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"student\" : \"student11@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-54-79-76-211.ap-southeast-2.compute.amazonaws.com:3000/api/suspend",
+					"protocol": "http",
+					"host": [
+						"ec2-54-79-76-211",
+						"ap-southeast-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"suspend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get students info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-54-79-76-211.ap-southeast-2.compute.amazonaws.com:3000/api/students",
+					"protocol": "http",
+					"host": [
+						"ec2-54-79-76-211",
+						"ap-southeast-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"students"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
